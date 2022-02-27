@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Owned Farm Timers</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="poft.css" type="text/css">
+</head>
+<body>
+    <div class="content">
+        <div class="farmHeader">Manor Farm</div>
+        <div class="penRow farmRowHeader">
+            <div class="penName penRowItem">Pen</div>
+            <div class="penAnimals penRowItem">Animal</div>
+            <div class="penFoodAmount penRowItem">Food Amount</div>
+            <div class="penFoodOutTimes penRowItem">Food Runs Out</div>
+        </div>
+        <div class="penRow" penType="ManorFarm_small1">
+            <div class="penName penRowItem">Small Pen W</div>
+            <select class="penAnimals penRowItem">
+                <option value="empty">Empty</option>
+                <option value="rabbits">Rabbits</option>
+                <option value="chickens">Chickens</option>
+                <option value="chinchompas">Chinchompas</option>
+            </select>
+            <input type="text" class="penFoodAmount penRowItem" value=0>
+            <div class="penFoodOutTimes bad penRowItem">No Food!</div>
+        </div>
+        <div class="penRow" penType="ManorFarm_small2">
+            <div class="penName penRowItem">Small Pen E</div>
+            <select class="penAnimals penRowItem">
+                <option value="empty">Empty</option>
+                <option value="rabbits">Rabbits</option>
+                <option value="chickens">Chickens</option>
+                <option value="chinchompas">Chinchompas</option>
+            </select>
+            <input type="text" class="penFoodAmount penRowItem" value=0>
+            <div class="penFoodOutTimes bad penRowItem">No Food!</div>
+        </div>
+        <div class="penRow" penType="ManorFarm_med1">
+            <div class="penName penRowItem">Medium Pen N</div>
+            <select class="penAnimals penRowItem">
+                <option value="empty">Empty</option>
+                <option value="sheep">Sheep</option>
+                <option value="spiders">Spiders</option>
+                <option value="zygomites">Zygomites</option>
+            </select>
+            <input type="text" class="penFoodAmount penRowItem" value=0>
+            <div class="penFoodOutTimes bad penRowItem">No Food!</div>
+        </div>
+        <div class="penRow" penType="ManorFarm_med2">
+            <div class="penName penRowItem">Medium Pen E</div>
+            <select class="penAnimals penRowItem">
+                <option value="empty">Empty</option>
+                <option value="sheep">Sheep</option>
+                <option value="spiders">Spiders</option>
+                <option value="zygomites">Zygomites</option>
+            </select>
+            <input type="text" class="penFoodAmount penRowItem" value=0>
+            <div class="penFoodOutTimes bad penRowItem">No Food!</div>
+        </div>
+        <div class="penRow" penType="ManorFarm_large1">
+            <div class="penName penRowItem">Large Pen NW</div>
+            <select class="penAnimals penRowItem">
+                <option value="empty">Empty</option>
+                <option value="cows">Cows</option>
+                <option value="yaks">Yaks</option>
+                <option value="dragons">Dragons</option>
+            </select>
+            <input type="text" class="penFoodAmount penRowItem" value=0>
+            <div class="penFoodOutTimes bad penRowItem">No Food!</div>
+        </div>
+        <div class="penRow" penType="ManorFarm_large2">
+            <div class="penName penRowItem">Large Pen SE</div>
+            <select class="penAnimals penRowItem">
+                <option value="empty">Empty</option>
+                <option value="cows">Cows</option>
+                <option value="yaks">Yaks</option>
+                <option value="dragons">Dragons</option>
+            </select>
+            <input type="text" class="penFoodAmount penRowItem" value=0>
+            <div class="penFoodOutTimes bad penRowItem">No Food!</div>
+        </div>
+        <div class="penRow" penType="ManorFarm_breeding">
+            <div class="penName penRowItem">Breeding Pen</div>
+            <select class="penAnimals penRowItem">
+                <option value="empty">Empty</option>
+                <option value="rabbits">Rabbits</option>
+                <option value="chickens">Chickens</option>
+                <option value="chinchompas">Chinchompas</option>
+                <option value="sheep">Sheep</option>
+                <option value="spiders">Spiders</option>
+                <option value="zygomites">Zygomites</option>
+                <option value="cows">Cows</option>
+                <option value="yaks">Yaks</option>
+                <option value="dragons">Dragons</option>
+            </select>
+            <input type="text" class="penFoodAmount penRowItem" value=0>
+            <div class="penFoodOutTimes bad penRowItem">No Food!</div>
+        </div>
+
+
+        <div class="farmHeader">Ranch out of Time</div>
+        <div class="penRow farmRowHeader">
+            <div class="penName penRowItem">Pen</div>
+            <div class="penAnimals penRowItem">Animal</div>
+            <div class="penFoodAmount penRowItem">Food Amount</div>
+            <div class="penFoodOutTimes penRowItem">Food Runs Out</div>
+        </div>
+        <div class="penRow" penType="Anachronia_small">
+            <div class="penName penRowItem">Small Pen</div>
+            <select class="penAnimals penRowItem">
+                <option value="empty">Empty</option>
+                <option value="frogs">Frogs</option>
+                <option value="salamanders">Salamanders</option>
+            </select>
+            <input type="text" class="penFoodAmount penRowItem" value=0>
+            <div class="penFoodOutTimes bad penRowItem">No Food!</div>
+        </div>
+        <div class="penRow" penType="Anachronia_medium">
+            <div class="penName penRowItem">Medium Pen</div>
+            <select class="penAnimals penRowItem">
+                <option value="empty">Empty</option>
+                <option value="jadinkos">Jadinkos</option>
+                <option value="varanusaurs">Varanusaurs</option>
+            </select>
+            <input type="text" class="penFoodAmount penRowItem" value=0>
+            <div class="penFoodOutTimes bad penRowItem">No Food!</div>
+        </div>
+        <div class="penRow" penType="Anachronia_large1">
+            <div class="penName penRowItem">Large Pen N</div>
+            <select class="penAnimals penRowItem">
+                <option value="empty">Empty</option>
+                <option value="arcane apoterrasaurs">Arcane Apoterrasaurs</option>
+                <option value="brutish dinosaurs">Brutish Dinosaurs</option>
+                <option value="scimitops">Scimitops</option>
+                <option value="bagrada rex">Bagrada Rexes</option>
+                <option value="spicati apoterrsaur">Spicati Apoterrasaurs</option>
+                <option value="asciatops">Asciatops</option>
+                <option value="corbicula rex">Corbicula Rex</option>
+                <option value="oculi apoterrasaurs">Oculi Apoterrasaurs</option>
+                <option value="malletops">Malletops</option>
+                <option value="pavosaurus rex">Pavosaurus Rex</option>
+            </select>
+            <input type="text" class="penFoodAmount penRowItem" value=0>
+            <div class="penFoodOutTimes bad penRowItem">No Food!</div>
+        </div>
+        <div class="penRow" penType="Anachronia_large2">
+            <div class="penName penRowItem">Large Pen S</div>
+            <select class="penAnimals penRowItem">
+                <option value="empty">Empty</option>
+                <option value="arcane apoterrasaurs">Arcane Apoterrasaurs</option>
+                <option value="brutish dinosaurs">Brutish Dinosaurs</option>
+                <option value="scimitops">Scimitops</option>
+                <option value="bagrada rex">Bagrada Rexes</option>
+                <option value="spicati apoterrsaur">Spicati Apoterrasaurs</option>
+                <option value="asciatops">Asciatops</option>
+                <option value="corbicula rex">Corbicula Rex</option>
+                <option value="oculi apoterrasaurs">Oculi Apoterrasaurs</option>
+                <option value="malletops">Malletops</option>
+                <option value="pavosaurus rex">Pavosaurus Rex</option>
+            </select>
+            <input type="text" class="penFoodAmount penRowItem" value=0>
+            <div class="penFoodOutTimes bad penRowItem">No Food!</div>
+        </div>
+        <div class="penRow" penType="Anachronia_breeding">
+            <div class="penName penRowItem">Breeding Pen</div>
+            <select class="penAnimals penRowItem">
+                <option value="empty">Empty</option>
+                <option value="frogs">Frogs</option>
+                <option value="salamanders">Salamanders</option>
+                <option value="jadinkos">Jadinkos</option>
+                <option value="varanusaurs">Varanusaurs</option>
+                <option value="arcane apoterrasaurs">Arcane Apoterrasaurs</option>
+                <option value="brutish dinosaurs">Brutish Dinosaurs</option>
+                <option value="scimitops">Scimitops</option>
+                <option value="bagrada rex">Bagrada Rexes</option>
+                <option value="spicati apoterrsaur">Spicati Apoterrasaurs</option>
+                <option value="asciatops">Asciatops</option>
+                <option value="corbicula rex">Corbicula Rex</option>
+                <option value="oculi apoterrasaurs">Oculi Apoterrasaurs</option>
+                <option value="malletops">Malletops</option>
+                <option value="pavosaurus rex">Pavosaurus Rex</option>
+            </select>
+            <input type="text" class="penFoodAmount penRowItem" value=0>
+            <div class="penFoodOutTimes bad penRowItem">No Food!</div>
+        </div>
+    </div>
+    <script src="poft.js"></script>
+</body>
+</html>
