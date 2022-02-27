@@ -87,7 +87,7 @@ const _pof = function(){
                 const expiryTime = Date.now() + ONE_HOUR*(1+Math.floor(quantity/animalAmounts[pen]));
                 const expiryHours = ONE_HOUR*(1+Math.floor(quantity/animalAmounts[pen]))/(1000*3600);
     
-                $(timeCell).html(`${new Date(expiryTime).toLocaleString()} (${~~expiryHours}H)`);
+                $(timeCell).html(`${~~(expiryHours/24)}D ${~~expiryHours%24}H`);
 
                 if(expiryTime - Date.now() < ONE_DAY){
                     $(timeCell).addClass('soon');
