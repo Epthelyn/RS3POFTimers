@@ -3,20 +3,20 @@ const _pof = function(){
     const ONE_DAY = 24*ONE_HOUR;
     let timers = {
         "ManorFarm": {
-            small1: {time: 0, food: 0}, //"food" refers to the amount of food available at "time"
-            small2: {time: 0, food: 0},
-            med1: {time: 0, food: 0},
-            med2: {time: 0, food: 0},
-            large1: {time: 0, food: 0},
-            large2: {time: 0, food: 0},
-            breeding: {time: 0, food: 0}
+            small1: {time: 0, food: 0, animalCount: 6}, //"food" refers to the amount of food available at "time"
+            small2: {time: 0, food: 0, animalCount: 6},
+            med1: {time: 0, food: 0, animalCount: 4},
+            med2: {time: 0, food: 0, animalCount: 4},
+            large1: {time: 0, food: 0, animalCount: 3},
+            large2: {time: 0, food: 0, animalCount: 3},
+            breeding: {time: 0, food: 0, animalCount: 4}
         },
         "Anachronia": {
-            small: {time: 0, food: 0},
-            medium: {time: 0, food: 0},
-            large1: {time: 0, food: 0},
-            large2: {time: 0, food: 0},
-            breeding: {time: 0, food: 0}
+            small: {time: 0, food: 0, animalCount: 6},
+            medium: {time: 0, food: 0, animalCount: 4},
+            large1: {time: 0, food: 0, animalCount: 3},
+            large2: {time: 0, food: 0, animalCount: 3},
+            breeding: {time: 0, food: 0, animalCount: 4}
         }
     }
 
@@ -139,7 +139,7 @@ const _pof = function(){
             }
         }
         else{
-            $(timeCell).html("NO FOOD!");
+            $(timeCell).html("No food!");
             $(timeCell).addClass('bad');
             $(timeCell).removeClass('good');
             $(timeCell).removeClass('soon');
