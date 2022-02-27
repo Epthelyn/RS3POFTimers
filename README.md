@@ -6,4 +6,4 @@ How to use:
 - Select animals (currently does nothing)
 - Watch timers slowly tick down until you have to refill pens again
 
-The food number does not change until you enter a new number, only the time.
+The food number does not change until you enter a new number, only the time. The rate at which food decreases assumes the maximum number of animals are in a pen.
